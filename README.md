@@ -18,6 +18,8 @@ zero-shot commonsense QA accuracy.
 
 ## Method (Ghosted Layers)
 
+<img width="100%" height="436" alt="Image" src="https://github.com/user-attachments/assets/bec187bb-33c9-43bf-8364-e340341499a0" />
+
 Layer pruning removes a block `B = {ℓ*, …, ℓ*+n-1}` of `n` decoder layers. In a
 pre-norm residual network the post-boundary hidden state of the *unpruned* model
 is `X_post = X_pre + Δ`, where `Δ = Σ f(X)` is the contribution of the removed
