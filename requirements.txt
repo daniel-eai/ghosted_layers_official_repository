@@ -1,0 +1,11 @@
+# Environment follows the official LinearPatch repo:
+#   https://github.com/chenxinrui-tsinghua/LinearPatch
+# Install PyTorch + transformers per that repo first, then these extras.
+torch
+transformers
+accelerate
+datasets
+sentencepiece
+lm-eval            # EleutherAI lm-evaluation-harness
+numpy
+tqdm
