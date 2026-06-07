@@ -16,7 +16,7 @@ zero-shot commonsense QA accuracy.
 
 ---
 
-## Method in one paragraph
+## Method (Ghosted Layers)
 
 Layer pruning removes a block `B = {ℓ*, …, ℓ*+n-1}` of `n` decoder layers. In a
 pre-norm residual network the post-boundary hidden state of the *unpruned* model
@@ -75,8 +75,6 @@ pip install -r requirements.txt
 
 Key versions (single NVIDIA A40 48GB used in the paper):
 `torch`, `transformers`, `datasets`, `lm-eval` (lm-evaluation-harness),
-`scikit-learn` is **not** required (clustering criteria are not part of this repo).
-
 ---
 
 ## Usage
