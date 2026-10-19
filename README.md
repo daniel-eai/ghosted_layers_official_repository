@@ -1,20 +1,26 @@
 # Ghosted Layers: Unconstrained Activation Alignment for Recovering Layer-Pruned LLMs
 
-Training-free recovery for layer-pruned large language models. After removing
-Transformer decoder blocks, **Ghosted Layers** inserts a single closed-form
-linear operator `W* = I + M*` at each pruning boundary that reconstructs the
-boundary-activation gap — the unconstrained optimum of the same alignment
-objective that **LinearPatch** solves only over the symmetric subspace.
+**Ghosted Layers** is a training-free method for recovering the performance of layer-pruned large language models (LLMs). Removing Transformer layers reduces computation but disrupts the hidden representations passed to subsequent layers. Ghosted Layers addresses this problem by introducing an **unconstrained, closed-form linear transformation** that reconstructs the missing activation contribution without retraining.
 
-This repository is a minimal reproduction comparing **LinearPatch** (`diag` /
-`rotate`) against **Ghosted Layers** (`ghost`) under two layer-selection
-criteria (**LLM-Streamline** and **ShortGPT**), measuring perplexity and
-zero-shot commonsense QA accuracy.
+Unlike existing methods that restrict the transformation to symmetric matrices, Ghosted Layers optimizes over the full matrix space, achieving **higher accuracy and lower perplexity at the same inference cost**.
 
-> Our code is built on the official LinearPatch repository:
-> **https://github.com/chenxinrui-tsinghua/LinearPatch**
+For example, after pruning 7 of 32 layers from LLaMA-3.1-8B, Ghosted Layers improves average zero-shot accuracy across nine benchmarks from **42.60% to 60.01%**, compared to **53.27%** with LinearPatch-R.
 
----
+📄 **Paper:** [arXiv:2605.15491](https://arxiv.org/abs/2605.15491)
+
+## Related Work
+
+| Method | Conference |
+|---|---|
+| LinearPatch | NeurIPS 2025 |
+| ReplaceMe | NeurIPS 2025 |
+| **Ghosted Layers (Ours)** | **NeurIPS 2026** |
+
+## Repository Overview
+
+This repository provides an implementation of **Ghosted Layers** and comparisons with **LinearPatch-D** and **LinearPatch-R** under two layer-pruning methods, **LLM-Streamline** and **ShortGPT**. We evaluate recovery performance using perplexity and zero-shot commonsense reasoning benchmarks.
+
+> **Acknowledgment:** Our implementation builds on the official [LinearPatch repository](https://github.com/chenxinrui-tsinghua/LinearPatch).
 
 ## Method (Ghosted Layers)
 
