@@ -1,4 +1,4 @@
-# Ghosted Layers: Unconstrained Activation Alignment for Recovering Layer-Pruned LLMs (NeurIPS 2026)
+# [NeurIPS 2026] Ghosted Layers: Unconstrained Activation Alignment for Recovering Layer-Pruned LLMs
 
 <img width="100%" alt="Image" src="https://github.com/user-attachments/assets/b37c3ce8-d05f-4036-8160-4246c11e1d15" />
 
