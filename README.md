@@ -1,4 +1,4 @@
-# Ghosted Layers: Unconstrained Activation Alignment for Recovering Layer-Pruned LLMs
+# Ghosted Layers: Unconstrained Activation Alignment for Recovering Layer-Pruned LLMs (NeurIPS 2026)
 
 **Ghosted Layers** is a training-free method for recovering the performance of layer-pruned large language models (LLMs). Removing Transformer layers reduces computation but disrupts the hidden representations passed to subsequent layers. Ghosted Layers addresses this problem by introducing an **unconstrained, closed-form linear transformation** that reconstructs the missing activation contribution without retraining.
 
